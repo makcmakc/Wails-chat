@@ -1,0 +1,137 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
+li {
+  list-style: none;
+}
+
+#app {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-size: 1em;
+  letter-spacing: 0.1px;
+  color: #32465a;
+}
+
+#sidepanel {
+  float: left;
+  min-width: 60px;
+  max-width: 280px;
+  width: 280px;
+  height: 100%;
+  background: #FFFFFF;
+  color: #f5f5f5;
+  overflow: hidden;
+  position: relative;
+}
+
+
+/* ------- ------- */
+
+
+.sidepanel-top {
+  margin-top: 15px;
+  padding-bottom: 10px;
+  /*border-bottom: 1px solid #ccc;*/
+}
+
+.menu {
+  width: 18px;
+  height: 18px;
+  margin-left: 16px;
+  margin-top: 8px;
+  position: absolute;
+  cursor: pointer;
+}
+
+#search {
+  font-weight: 300;
+  width: 80%;
+  margin-left: 45px;
+}
+
+#search label {
+  position: absolute;
+  margin: 10px 0 0 10px;
+}
+
+#search input {
+  border: none;
+  margin-bottom: 6px;
+  background: #F1F1F1;
+  border-radius: 3px;
+  color: #999999;
+  padding: 12px 10px 10px 8px;
+  width: calc(100% - 25px);
+  border-radius: 5px;
+  transition: all .1s ease-in;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px rgba(48,163,230,.5);
+  background: #FFFFFF;
+}
+
+input::-webkit-input-placeholder, 
+input::-moz-placeholder, 
+input::-ms-input-placeholder, 
+input::-moz-placeholder {
+  color: #f5f5f5;
+}
+
+
+/* ------- ------- */
+
+
+.message-input {
+  max-width: 520px;
+  width: 519px;
+  height: 45px;
+  background:  #FFFFFF;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  border-left: 1px solid #f5f5f5;
+}
+
+.info-panel {
+  max-width: 520px;
+  width: 519px;
+  height: 60px;
+  background:  #FFFFFF;
+  position: absolute;
+  top: 0;
+  right: 0;  
+
+  border-left: 1px solid #f5f5f5;
+}
+
+
+/* ------- ------- */
+
+
+.messages {
+  width: 520px;
+  height: 395px;
+  position: absolute;
+  bottom: 45px;
+  top: 60px;
+  right: 0;
+  
+}
+
+.messages img {
+  width: 60%;
+  height: 70%;
+  margin-top: 50px;
+  opacity: .7;
+}
