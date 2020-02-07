@@ -1,56 +1,98 @@
 <template>
 	<div class="sidepanel-top">
-		<div class="menu" v-on:click="show">
-			<svg class="menu-icon" x="0px" y="0px" viewBox="0 0 512 512" fill="#999999">
-				<g>
-					<g>
-						<path d="M492,236H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h472c11.046,0,20-8.954,20-20S503.046,236,492,236z"/>
-					</g>
-				</g>
-				<g>
-					<g>
-						<path d="M492,76H20C8.954,76,0,84.954,0,96s8.954,20,20,20h472c11.046,0,20-8.954,20-20S503.046,76,492,76z"/>
-					</g>
-				</g>
-				<g>
-					<g>
-						<path d="M492,396H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h472c11.046,0,20-8.954,20-20 C512,404.954,503.046,396,492,396z"/>
-					</g>
-				</g>
-			</svg>
+		<div class="bm-burger-button">
+			
 		</div>
 
 		<div id="search">
 			<input type="text" placeholder="Найти..." />
 		</div>		
+	
 
-		<modal name="contact-info" :width="400" :height="500">
-			<h3>Information</h3>
+		<Slide noOverlay width="280">
+			<h4>Маximillian</h4>
+		</Slide>
 
-			<div class="phone">7 906 335 89 35</div>
-		</modal>	
 
 	</div>
 </template>
 
 
 <script>
+	import { Slide } from 'vue-burger-menu'
 	export default {
 		name: 'sidepanel-top',
-		methods: {
-			show () {
-				this.$modal.show('contact-info');
-			},
-			hide () {
-				this.$modal.hide('contact-info');
-			}
-		}		
+		components: {
+			Slide 
+		},
+	
 	};
 </script>
 
 
 <style>
+.bm-burger-button {
+	position: fixed;
+	width: 20px;
+	height: 20px;
+	left: 14px;
+	top: 25px;
+	cursor: pointer;
+}
+.bm-burger-bars {
+	background-color: #999999;
+}
+.line-style {
+	position: absolute;
+	height: 8%;
+	left: 0;
+	right: 0;
+}
 
+.cross-style {
+position: absolute;
+top: 12px;
+right: 2px;
+cursor: pointer;
+}
+.bm-cross {
+	background: #bdc3c7;
+}
+.bm-cross-button {
+height: 24px;
+width: 24px;
+}
+.bm-menu {
+height: 100%; /* 100% Full-height */
+width: 0; /* 0 width - change this with JavaScript */
+position: fixed; /* Stay in place */
+z-index: 1000; /* Stay on top */
+top: 0;
+left: 0;
+background-color: #FFFFFF; /* Black*/
+overflow-x: hidden; /* Disable horizontal scroll */
+padding-top: 60px; /* Place content 60px from the top */
+transition: 0.5s; /*0.5 second transition effect to slide in the sidenav*/
+}
+
+.bm-overlay {
+background: rgba(0, 0, 0, 0.9);
+}
+.bm-item-list {
+color: #b8b7ad;
+margin-left: 10%;
+font-size: 20px;
+}
+.bm-item-list > * {
+display: flex;
+text-decoration: none;
+padding: 0.7em;
+}
+.bm-item-list > * > span {
+margin-left: 10px;
+font-weight: 700;
+color: white;
+}
 
 
 </style>
