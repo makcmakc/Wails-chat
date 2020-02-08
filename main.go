@@ -1,12 +1,16 @@
 package main
 
 import (
+  "fmt"
+
   "github.com/leaanthony/mewn"
   "github.com/wailsapp/wails"
+
 )
 
-func basic() string {
-  return "Hello World!"
+
+func server() {
+  fmt.Println("App is Running")  
 }
 
 func main() {
@@ -22,6 +26,6 @@ func main() {
     CSS:    css,
     Colour: "#131313",
   })
-  app.Bind(basic)
+  app.Bind(server)
   app.Run()
 }

@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<Message />
+		<Message v-for="msg in messages" v-bind:msg="msg" v-bind:key="msg" />	
 	</div>
 </template>
 
@@ -9,6 +9,7 @@
 	import Message from './Message.vue'
 	export default {
 		name: 'messages',
+		props: ['messages'],
 		components: {
 			Message
 		}

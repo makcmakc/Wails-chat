@@ -5,7 +5,7 @@
 
 		<div class="extra-functions">
 
-			<div class="adding btn">
+			<div class="paperclip btn">
 				<svg x="0px" y="0px"
 				viewBox="0 0 511.999 511.999" fill="#999999">
 				<g>
@@ -63,18 +63,15 @@
 
 
 <style>
-
-
 .extra-functions .btn {
 	width: 25px;
 	height: 25px;
 	bottom: 10px;
 }
 
-.extra-functions .adding {
+.extra-functions .paperclip {
 	position: absolute;
 	left: 14px;
-	
 }
 
 .extra-functions .emoji {
@@ -87,9 +84,6 @@
 	position: absolute;
 	right: 300px;
 }
-
-
-
 
 
 .msg-input {

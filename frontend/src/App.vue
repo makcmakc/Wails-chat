@@ -11,7 +11,7 @@
     </div>  
 
     <div class="messages">
-      <Messages />
+      <Messages v-bind:messages="messages" />
     </div>
 
     <div class="message-input">
@@ -34,6 +34,16 @@ import "./assets/css/sidepanel.css";
 
 export default {
   name: "app",
+  data() {
+    return {
+      messages: [
+        {id: 1, msg: 'Далеко-далеко за словесными горами в стране.', from: true},
+        {id: 2, msg: 'Lorem ipsum dolor sit amet, orem ipsum dolor sit amet.', from: false},
+        {id: 3, msg: 'blah blag djahsjd sadsdasdp landlnsd', from: true},
+        {id: 4, msg: 'Consectetur adipisicing elit. Voluptate, quam.', from: false},
+      ]
+    }
+  },
   components: {
     Sidebar,
     Contacts,
