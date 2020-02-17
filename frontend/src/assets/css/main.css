@@ -31,6 +31,14 @@ li {
   background: #E6EAEA;
 }
 
+.truncate {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
 /*############################################
 ----------------- SIDEPANEL ------------------
 ############################################*/
@@ -196,8 +204,8 @@ li {
 }
 
 .bm-item-list .extra svg{
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
 }
 
 
