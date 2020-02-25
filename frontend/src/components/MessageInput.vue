@@ -1,7 +1,15 @@
 <template>
 	<div class="main-input">
 
-		<input type="text" class="msg-input" placeholder="Написать сообщение...">
+		<form @submit.prevent="onSubmit">
+
+			<input 
+				type="text" 
+				class="msg-input" 
+				placeholder="Написать сообщение..."
+				v-model="msg">
+
+		</form>
 
 		<div class="extra-functions">
 
@@ -51,13 +59,31 @@
 
 		</div>
 
+
+
 	</div>
 </template>
 
 
 <script>
 	export default {
+		data() {
+			return {
+				msg: ''
+			}
+		},
+		methods: {
+			onSubmit() {
+			/*if (this.msg.trim()) {
+				const newMsg = {
+					id: Date.now(),
+					msg: this.msg,
+					state: true
+				}*/
 
+				this.msg = ''
+			}
+		}
 	};
 </script>
 

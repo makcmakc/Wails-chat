@@ -224,8 +224,6 @@ li {
   border-left: 1px solid #f5f5f5;
 }
 
-
-
 .contact-info {
   width: 20px;
   height: 20px;
@@ -260,7 +258,7 @@ li {
 /*############################################
 ------------------ MESSAGES ------------------
 ############################################*/
-
+/*
 .messages {
   width: calc(100% - 280px);
   height: 100vh;
@@ -284,6 +282,8 @@ li {
   margin-left: auto;
   margin-right: auto;
 }
+*/
+
 
 
 
@@ -299,18 +299,22 @@ li {
   padding: 10px;
   background: #EFFDDE;
   border-radius: 8px;
-
+  
+  margin-right: -25px;
+  margin-top: 20px;
   float: right;
+
+  /*float: right;
   margin-right: 15px; 
   margin-top: 20px;
 
   z-index: 99;
-  display: grid;
+  display: grid;*/
   
 }
 
 .message.from {
   background: #FFFFFF;
-  float: left;
-  margin-left: 15px;
+
+  margin-left: 85px;
 }

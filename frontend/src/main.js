@@ -2,8 +2,12 @@ import Vue from 'vue';
 import App from './App.vue';
 
 import VModal from 'vue-js-modal'
+import ToggleButton from 'vue-js-toggle-button'
  
-Vue.use(VModal)
+Vue.use(ToggleButton)
+
+ 
+Vue.use(VModal, { dialog: true, clickToClose: true, scrollable: true })
 
 
 Vue.config.productionTip = false;

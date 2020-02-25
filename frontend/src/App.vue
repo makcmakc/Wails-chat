@@ -11,7 +11,7 @@
     </div>  
 
     <div class="messages">
-      <Messages v-bind:messages="messages" />
+      <Messages v-bind:messages="messages" v-on:delete-message="deleteMsg" />
     </div>
 
     <div class="message-input">
@@ -42,6 +42,11 @@ export default {
         {id: 3, msg: 'blah blag djahsjd sadsdasdp landlnsd', from: true},
         {id: 4, msg: 'Consectetur adipisicing elit. Voluptate, quam.', from: false},
       ]
+    }
+  },
+  methods: {
+    deleteMsg(id) {
+      this.messages = this.messages.filter(m => m.id !== id)
     }
   },
   components: {
