@@ -29,18 +29,18 @@ import MessageInput from "./components/MessageInput.vue"
 import Messages from "./components/Messages.vue"
 import Info from "./components/Info.vue"
 
-import "./assets/css/main.css";
-import "./assets/css/sidepanel.css";
+import "./assets/css/main.css"
 
 export default {
   name: "app",
   data() {
     return {
       messages: [
-        {id: 1, msg: 'Далеко-далеко за словесными горами в стране.', from: true},
-        {id: 2, msg: 'Lorem ipsum dolor sit amet, orem ipsum dolor sit amet.', from: false},
-        {id: 3, msg: 'blah blag djahsjd sadsdasdp landlnsd', from: true},
-        {id: 4, msg: 'Consectetur adipisicing elit. Voluptate, quam.', from: false},
+        {id: 1, msg: 'Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Что деревни то, буквоград своих дал это ее. Рукописи дал буквенных точках заглавных если, взгляд!', received: true},
+        {id: 2, msg: 'Lorem ipsum dolor sit amet, orem ipsum dolor sit amet.', received: false},
+        {id: 3, msg: 'blah blag djahsjd sadsdasdp landlnsd', received: true},
+        {id: 4, msg: 'Consectetur adipisicing elit. Voluptate, quam.', received: false},
+        {id: 4, msg: 'Consectetur adipisicing elit. Voluptate, quam.', received: false},
       ]
     }
   },
