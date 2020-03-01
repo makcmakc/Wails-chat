@@ -325,14 +325,28 @@ li {
 .conversation .container {
   height: calc(100% - 68px);
   overflow-x: hidden;
-  padding: 0 16px;
+  padding: 0 15px;
   margin-bottom: 5px;
+  margin-top: 10px;
 }
 
 .conversation .container:after {
   content: "";
   display: table;
   clear: both;
+}
+
+.message__day {
+  padding: 8px 10px;
+  background: rgba(0, 0, 0, .2);
+  text-align: center;
+  width: 120px;
+  border-radius: 100px;
+  color: #fff;
+  position: absolute;
+  left: 55%;
+  top: 5%;
+  z-index: 9;
 }
 
 .message {
@@ -345,7 +359,7 @@ li {
   margin: 8px 0;
   max-width: 85%;
   word-wrap: break-word;
-  z-index: -1;
+ /* z-index: -1;*/
   padding: 10px;
   border-radius: 8px;
   background: #EFFDDE;

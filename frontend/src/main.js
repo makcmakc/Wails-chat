@@ -3,6 +3,8 @@ import App from './App.vue';
 
 import VModal from 'vue-js-modal'
 import ToggleButton from 'vue-js-toggle-button'
+
+Vue.use(require('vue-moment'));
  
 Vue.use(ToggleButton)
 

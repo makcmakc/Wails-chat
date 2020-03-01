@@ -40,7 +40,7 @@ export default {
         {id: 2, msg: 'Lorem ipsum dolor sit amet, orem ipsum dolor sit amet.', received: false},
         {id: 3, msg: 'blah blag djahsjd sadsdasdp landlnsd', received: true},
         {id: 4, msg: 'Consectetur adipisicing elit. Voluptate, quam.', received: false},
-        {id: 4, msg: 'Consectetur adipisicing elit. Voluptate, quam.', received: false},
+        {id: 5, msg: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum architecto totam quam fugit asperiores eum..', received: false},
       ]
     }
   },
