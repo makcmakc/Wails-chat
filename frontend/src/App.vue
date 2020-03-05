@@ -15,7 +15,7 @@
     </div>
 
     <div class="message-input">
-      <MessageInput />
+      <MessageInput @add-new-msg="newMsg" />
     </div>
 
   </div>
@@ -29,6 +29,9 @@ import MessageInput from "./components/MessageInput.vue"
 import Messages from "./components/Messages.vue"
 import Info from "./components/Info.vue"
 
+
+//import moment from 'moment'
+
 import "./assets/css/main.css"
 
 export default {
@@ -36,15 +39,15 @@ export default {
   data() {
     return {
       messages: [
-        {id: 1, msg: 'Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Что деревни то, буквоград своих дал это ее. Рукописи дал буквенных точках заглавных если, взгляд!', received: true},
-        {id: 2, msg: 'Lorem ipsum dolor sit amet, orem ipsum dolor sit amet.', received: false},
-        {id: 3, msg: 'blah blag djahsjd sadsdasdp landlnsd', received: true},
-        {id: 4, msg: 'Consectetur adipisicing elit. Voluptate, quam.', received: false},
-        {id: 5, msg: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum architecto totam quam fugit asperiores eum..', received: false},
+        {id: 1, time: '21:30', content: 'Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Что деревни то, буквоград своих дал это ее. Рукописи дал буквенных точках заглавных если, взгляд!', received: true},
+        {id: 2, time: '21:46', content: 'Lorem ipsum dolor sit amet, orem ipsum dolor sit amet.', received: false}
       ]
     }
   },
   methods: {
+    newMsg(msg) {
+      this.messages.push(msg)
+    },
     deleteMsg(id) {
       this.messages = this.messages.filter(m => m.id !== id)
     }

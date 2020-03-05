@@ -7,9 +7,13 @@
 				type="text" 
 				class="msg-input" 
 				placeholder="Написать сообщение..."
-				v-model="msg">
+				v-model="newMsg"
+				autocomplete="off"
+			>
 
 		</form>
+
+
 
 		<div class="extra-functions">
 
@@ -66,23 +70,31 @@
 
 
 <script>
+	
+
 	export default {
 		data() {
 			return {
-				msg: ''
+				newMsg: ''
 			}
 		},
 		methods: {
 			onSubmit() {
-			/*if (this.msg.trim()) {
-				const newMsg = {
-					id: Date.now(),
-					msg: this.msg,
-					state: true
-				}*/
+				if (this.newMsg.trim()) {
 
-				this.msg = ''
+					const msg = {
+						time: Date.now() ,
+						content: this.newMsg,
+						state: true
+					}
+
+					this.$emit('add-new-msg', msg)
+					this.newMsg = ''
+				}
 			}
+		},
+		mounted() {
+
 		}
 	};
 </script>
