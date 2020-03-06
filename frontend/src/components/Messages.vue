@@ -6,8 +6,8 @@
       <span>{{ time | moment("Do MMMM") }}</span>
     </div>-->
 
-    <div v-for="(msg, i) in messages" v-bind:key="i" v-bind:index="i"> 
-      <div class="message" :class="{received: msg.received}" @contextmenu.prevent="$refs.menu.open($event, { body: msg.msg, index: msg.id })">
+    <div v-for="(msg, i) in messages" v-bind:key="i"> 
+      <div class="message" :class="{received: msg.received}" @contextmenu.prevent="$refs.menu.open($event, { body: msg.content, time: msg.time, index: msg.id })">
       {{ msg.content }}
       <span class="metadata">
       <span class="time">{{ msg.time | moment("k:mm") }}</span>
@@ -33,7 +33,7 @@
 			<li>
 				<a href="#" v-on:click.prevent="confirmDelete(msg.data.index)">Удалить сообщение</a></li>
 			<li>
-				<a href="#" v-on:click.prevent="highlightMessage(msg.data.body)">Выделить сообщение</a>
+				<a href="#" v-on:click.prevent="highlightMessage(msg)">Выделить сообщение</a>
 			</li>
       </template>
     </vue-context>	
@@ -70,35 +70,27 @@
 							title: 'Удалить',
 							handler: (id) => {
 								//this.$emit('delete-message', id)
-                this.$delete(this.messages, id);
+                this.$delete(this.messages, id)
                 this.$modal.hide('dialog')
 							}
 						}
 					]
 				})
 			},
-			copyText() {
-        //var copyTextareaBtn = document.querySelector('.js-textareacopybtn');
-
-        //copyTextareaBtn.addEventListener('click', function(event) {
-        // const copyTextarea = document.querySelector('.js-copytextarea');
-        //copyTextarea.focus();
-          //text.select();
-
-         // console.log(text)
-
-        /*  try {
-            const successful = document.execCommand('copy');
-            const msg = successful ? 'successful' : 'unsuccessful';
-            console.log('Copying text command was ' + msg);
-          } catch (err) {
-            console.log('Oops, unable to copy');
-          }*/
-       // });        
+			async copyText(text) {
+        try {
+          const toCopy = text || location.href
+          await navigator.clipboard.writeText(toCopy)
+        }
+        catch (err) {
+          console.error('Failed to copy: ', err)
+        }      
       },
       reply() {},
       forwardMessage() {},
-      highlightMessage() {}
+      highlightMessage(msg) {
+        console.log(msg)
+      }
 		},
 		mounted() {}
 	};

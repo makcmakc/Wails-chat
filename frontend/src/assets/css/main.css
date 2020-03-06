@@ -38,6 +38,22 @@ li {
   text-overflow: ellipsis;
 }
 
+*::-webkit-scrollbar {
+  transition: all .5s;
+  width: 5px;
+  height: 1px;
+  z-index: 10;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, .2);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, .3);
+  border-radius: 50px;
+}
+
 
 /*############################################
 ----------------- SIDEPANEL ------------------
@@ -305,21 +321,7 @@ li {
   height: calc(100% - 12px);
   position: relative;
   z-index: 0;
-}
-
-.conversation ::-webkit-scrollbar {
-  transition: all .5s;
-  width: 5px;
-  height: 1px;
-  z-index: 10;
-}
-
-.conversation ::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.conversation ::-webkit-scrollbar-thumb {
-  background: #b3ada7;
+  margin-left: 280px;
 }
 
 .conversation .container {
@@ -328,6 +330,7 @@ li {
   padding: 0 15px;
   margin-bottom: 5px;
   margin-top: 10px;
+
 }
 
 .conversation .container:after {

@@ -5,11 +5,7 @@
 		<div id="search">
 			<input type="text" placeholder="Найти..." />
 		</div>		
-	
-
 		<Menu />
-
-
 	</div>
 </template>
 
@@ -24,8 +20,3 @@
 	
 	};
 </script>
-
-
-<style>
-
-</style>
