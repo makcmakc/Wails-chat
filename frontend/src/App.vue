@@ -1,7 +1,7 @@
 <template>
   <div id="app">
 
-    <div id="sidepanel">
+    <div id="sidepanel" :class="{full: !isOpen}">
       <Sidebar />
       <Contacts />
     </div>
@@ -41,7 +41,8 @@ export default {
       messages: [
         {id: 1, time: '21:30', content: 'Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Что деревни то, буквоград своих дал это ее. Рукописи дал буквенных точках заглавных если, взгляд!', received: true},
         {id: 2, time: '21:46', content: 'Lorem ipsum dolor sit amet, orem ipsum dolor sit amet.', received: false}
-      ]
+      ],
+      isOpen: true
     }
   },
   methods: {

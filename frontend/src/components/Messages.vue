@@ -92,7 +92,10 @@
         console.log(msg)
       }
 		},
-		mounted() {}
+		mounted() { 
+			//const intElemScrollTop = window.intElemScrollTop
+			document.querySelector('.conversation .container div').scrollTop = 600
+		}
 	};
 </script>
 
