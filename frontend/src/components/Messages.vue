@@ -45,7 +45,6 @@
 
 <script>
 	import VueContext from 'vue-context'
-  //import moment from 'moment'
 
 	export default {
     name: 'messages',
@@ -88,8 +87,8 @@
       },
       reply() {},
       forwardMessage() {},
-      highlightMessage(msg) {
-        console.log(msg)
+      highlightMessage() {
+       // console.log(msg)
       }
 		},
 		mounted() { 

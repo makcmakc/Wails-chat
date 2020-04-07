@@ -1,0 +1,26 @@
+{
+	"contacts": [
+		{
+			"id": 1,
+			"name": "Alice",
+			"phone": "",
+			"status": "",
+			"avatar": "../assets/images/britney.jpg"
+		},
+		{
+			"id": 2,
+			"name": "Toni",
+			"phone": "",
+			"status": "",
+			"avatar": "./src/assets/images/vue.jpg"
+		},
+		{
+			"id": 3,
+			"name": "Britney",
+			"phone": "",
+			"status": "",
+			"avatar": "./src/assets/images/britney.jpg"
+		}			
+
+	]
+}
