@@ -4,6 +4,7 @@
 			class="contact-user"
 			v-for="contact in contacts" 
 			:key="contact.id"
+			v-on:click="toChatRoom(contact)"
 			>
 				<!--<img :src="contact.img">-->
 				<img :src="contact.avatar">
@@ -14,7 +15,7 @@
 				<span class="receiving-date">19:24</span>
 
 				<p class="truncate">
-					{{ contact.msg }}
+					{{ lastMessage }}
 				</p>
 		</li>
 	</ul>
@@ -27,16 +28,22 @@
 		name: 'contacts',
 		props: ['value'],
 		data: () => ({
-			messages: [
-			{id: 1, time: '21:30', content: 'Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Что деревни то, буквоград своих дал это ее. Рукописи дал буквенных точках заглавных если, взгляд!', received: true},
-			{id: 2, time: '21:46', content: 'Lorem ipsum dolor sit amet, orem ipsum dolor sit amet.', received: false}
-			]			
+			room: {},
+			lastMessage: 'Далеко-далеко за словесными горами в стране.'
 		}),
 		computed: {
-			...mapState(['contacts'])
+			...mapState(['contacts', 'chats'])
 		},
 		methods: {
-			...mapActions(['FETCH_CONTACTS'])
+			...mapActions(['FETCH_CONTACTS', 'FETCH_CHATS']),
+			toChatRoom(contact) {
+				this.FETCH_CHATS()
+				this.chats.map(chat => {
+					if (chat.id === contact.id) {
+						this.lastMessage = chat.content
+					}
+				})
+			}			
 		},
 		mounted() {
 			this.FETCH_CONTACTS()

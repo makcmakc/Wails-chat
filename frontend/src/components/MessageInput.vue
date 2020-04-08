@@ -1,17 +1,13 @@
 <template>
 	<div class="main-input">
 		<form @submit.prevent="onSubmit">
-			<!--<input 
+			<input 
 				type="text" 
 				class="msg-input" 
 				placeholder="Написать сообщение..."
 				v-model="newMsg"
 				autocomplete="off"
-			>-->
-			<textarea 
-				name="msg" 
-				id="msgInut"
-				></textarea>
+			>
 		</form>
 		
 		<div class="extra-functions">
@@ -77,6 +73,9 @@
 .extra-functions .paperclip {
 	position: absolute;
 	left: 14px;
+}
+.extra-functions .paperclip i {
+	transform: rotate(45deg);
 }
 
 .extra-functions .emoji {

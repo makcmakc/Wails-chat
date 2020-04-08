@@ -22,5 +22,18 @@
 			"avatar": "./src/assets/images/britney.jpg"
 		}			
 
+	],
+	"chats": [
+		{
+			"id": 1,
+			"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, ea.",
+			"recevied": false
+		},
+		{
+			"id": 2,
+			"content": "Далеко-далеко за словесными горами в стране, гласных и согласных.",
+			"recevied": true
+		}		
 	]
+
 }

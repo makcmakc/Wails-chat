@@ -21,20 +21,11 @@
 
     <vue-context ref="menu">
       <template slot-scope="msg">
-			<li>
-				<a href="#" v-on:click.prevent="reply(msg.data)">Ответить</a>
-			</li>
-			<li>
-				<a href="#" v-on:click.prevent="copyText(msg.data.body)">Копировать текст</a>
-			</li>
-			<li>
-				<a href="#" v-on:click.prevent="forwardMessage(msg.data.body)">Переслать сообщение</a>
-			</li>
-			<li>
-				<a href="#" v-on:click.prevent="confirmDelete(msg.data.index)">Удалить сообщение</a></li>
-			<li>
-				<a href="#" v-on:click.prevent="highlightMessage(msg)">Выделить сообщение</a>
-			</li>
+				<li><a href="#" v-on:click.prevent="reply(msg.data)">Ответить</a>	</li>
+				<li><a href="#" v-on:click.prevent="copyText(msg.data.body)">Копировать текст</a></li>
+				<li><a href="#" v-on:click.prevent="forwardMessage(msg.data.body)">Переслать сообщение</a></li>
+				<li><a href="#" v-on:click.prevent="confirmDelete(msg.data.index)">Удалить сообщение</a></li>
+				<li><a href="#" v-on:click.prevent="highlightMessage(msg)">Выделить сообщение</a></li>
       </template>
     </vue-context>	
     </div>
@@ -87,13 +78,7 @@
       },
       reply() {},
       forwardMessage() {},
-      highlightMessage() {
-       // console.log(msg)
-      }
-		},
-		mounted() { 
-			//const intElemScrollTop = window.intElemScrollTop
-			document.querySelector('.conversation .container div').scrollTop = 600
+      highlightMessage() {}
 		}
 	};
 </script>
