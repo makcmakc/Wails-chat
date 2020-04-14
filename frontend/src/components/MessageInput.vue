@@ -8,8 +8,13 @@
 				v-model="newMsg"
 				autocomplete="off"
 			>
+
+			<!--<div class="audio btn">
+				<i v-if="newMsg !== ''" class="material-icons">send</i>
+				<i v-else class="material-icons">keyboard_voice</i>
+			</div>-->
 		</form>
-		
+		<!--
 		<div class="extra-functions">
 
 			<div class="paperclip btn">
@@ -20,12 +25,9 @@
 				<i class="material-icons">sentiment_satisfied_alt</i>			
 			</div>
 
-			<div class="audio btn">
-				<i v-if="newMsg !== ''" class="material-icons">send</i>
-				<i v-else class="material-icons">keyboard_voice</i>
-			</div>	
+	
 
-		</div>
+		</div>-->
 	</div>
 </template>
 
@@ -64,6 +66,13 @@
 
 
 <style>
+
+.main-input {
+  position: relative;
+}
+
+
+/*
 .extra-functions .btn {
 	width: 25px;
 	height: 25px;
@@ -83,12 +92,12 @@
 	right: 360px;
 }
 
-.extra-functions .audio {
+.audio {
 	bottom: 10px;
 	position: absolute;
 	right: 300px;
 }
-
+*/
 
 .msg-input {
 	max-width: 65%;
@@ -101,7 +110,7 @@
 	word-break: keep-all;
 
 	position: absolute;
-	left: 50px;
+	left: -150px;
 	top: 8px;
 }
 

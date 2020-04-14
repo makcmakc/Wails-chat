@@ -5,6 +5,7 @@
 		<div id="search">
 			<input type="text" placeholder="Найти..." />
 		</div>		
+		
 		<Menu />
 	</div>
 </template>
@@ -17,6 +18,5 @@
 		components: {
 			Menu
 		}
-	
 	};
 </script>

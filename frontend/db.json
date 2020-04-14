@@ -3,23 +3,23 @@
 		{
 			"id": 1,
 			"name": "Alice",
-			"phone": "",
+			"phone": "+7 903 465 78 93",
 			"status": "",
-			"avatar": "../assets/images/britney.jpg"
+			"avatar": "alice.jpg"
 		},
 		{
 			"id": 2,
 			"name": "Toni",
-			"phone": "",
+			"phone": "+7 803 465 78 92",
 			"status": "",
-			"avatar": "./src/assets/images/vue.jpg"
+			"avatar": "vue.jpg"
 		},
 		{
 			"id": 3,
 			"name": "Britney",
-			"phone": "",
+			"phone": "+2 2112 123 123",
 			"status": "",
-			"avatar": "./src/assets/images/britney.jpg"
+			"avatar": "britney.jpg"
 		}			
 
 	],

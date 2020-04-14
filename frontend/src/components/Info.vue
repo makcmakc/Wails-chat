@@ -69,7 +69,10 @@
 		methods: {
 			hide () {
 				this.$modal.hide('contact-info');
-			}
+			},
+			/*pushNotification: function() {
+				window.backend.MessageData
+			}*/
 		},
 		components: {
 			InfoNavigation

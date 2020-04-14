@@ -1,14 +1,10 @@
 <template>
 	<Slide noOverlay width="280">
-
-	
-			<img src="../assets/images/vue.jpg">
-			<h4>{{ name }}</h4>
-			<div class="phone-number">
-				{{ phoneNumber }}
-			</div>			
-	
-
+		<img src="../assets/images/vue.jpg">
+		<h4>{{ name }}</h4>
+		<div class="phone-number">
+			{{ phoneNumber }}
+		</div>			
 		
 		<div class="menu-points">
 			<ul>
@@ -20,9 +16,6 @@
 				<li><i class="material-icons">brightness_3</i>Ночной режим</li>
 			</ul>
 		</div>
-
-
-
 	</Slide>
 </template>
 

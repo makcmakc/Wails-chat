@@ -1,22 +1,23 @@
 package main
 
 import (
-  "fmt"
+  "log"
 
   "github.com/leaanthony/mewn"
   "github.com/wailsapp/wails"
-
+  "github.com/gen2brain/beeep"
 )
 
-
-func server() {
-  fmt.Println("App is Running")  
-}
 
 func main() {
 
   js := mewn.String("./frontend/dist/app.js")
   css := mewn.String("./frontend/dist/app.css")
+
+  notify, err := NewNotify()
+  if err != nil {
+    log.Fatal(err)
+  }
 
   app := wails.CreateApp(&wails.AppConfig{
     Width:  800,
@@ -26,6 +27,6 @@ func main() {
     CSS:    css,
     Colour: "#131313",
   })
-  app.Bind(server)
+  app.Bind(notify)
   app.Run()
 }

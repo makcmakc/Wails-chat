@@ -6,8 +6,8 @@
 			:key="contact.id"
 			v-on:click="toChatRoom(contact)"
 			>
-				<!--<img :src="contact.img">-->
-				<img :src="contact.avatar">
+
+				<img :src=" require(`../assets/images/${contact.avatar}`) ">
 
 
 				<h4>{{ contact.name }}</h4>
@@ -29,7 +29,7 @@
 		props: ['value'],
 		data: () => ({
 			room: {},
-			lastMessage: 'Далеко-далеко за словесными горами в стране.'
+			lastMessage: ''
 		}),
 		computed: {
 			...mapState(['contacts', 'chats'])

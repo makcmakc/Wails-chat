@@ -14,6 +14,7 @@ Vue.use(VModal, { dialog: true, clickToClose: true, scrollable: true })
 Vue.config.productionTip = false;
 Vue.config.devtools = true;
 
+// No back-end
 
 new Vue({
 	router,
@@ -21,9 +22,6 @@ new Vue({
 	render: h => h(App)
 }).$mount('#app')
 
-
-
-// No back-end
 /*
 import * as Wails from '@wailsapp/runtime';
 

@@ -7,23 +7,25 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'chat',
+    name: 'home',
+    meta: {layout: 'main'},
     component: () => import('../views/Chat.vue')
   },
   {
     path: '/login',
     name: 'login',
+    meta: {layout: 'login'},
     component: () => import('../views/Login.vue')
   },
   {
     path: '/user',
     name: 'user',
-    component: () => ('../components/users/v-users-list.vue')
+    component: () => ('')
   },
   {
     path: '/chat',
     name: 'chat',
-    component: () => ('../components/users/chat/v-user-chat.vue'),
+    component: () => (''),
     props: true
   }  
 ]
