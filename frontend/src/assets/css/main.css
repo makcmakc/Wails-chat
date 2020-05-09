@@ -660,6 +660,41 @@ a {
 
 
 /*############################################
------------------- MESSAGE ------------------
+---------------- AUDIO MESSAGE ---------------
 ############################################*/
+
+.vue-audio-recorder {
+  background-color: transparent;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vue-audio-recorder.active {
+  background-color: rgba(0, 0, 0, 0.1);
+  animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+.vue-audio-recorder i {
+  font-size: 26px;
+}
+
+.vue-audio-recorder.active i {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes pulse {
+  to {
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: scale(0.9);
+  }
+}
+
 

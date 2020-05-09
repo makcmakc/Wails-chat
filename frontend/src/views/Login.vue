@@ -6,7 +6,7 @@
     <router-link to="/" class="next">Next<i class="material-icons">chevron_right</i></router-link >
 
     <form>
-
+<!--
       <div class="form-title">
         <h2>Sign in</h2>
         <p>Please choose your country and enter your full phone number.</p>
@@ -42,11 +42,37 @@
               />
             <label for="input" class="control-label">Phone Number</label>
             <i class="bar"></i>
-            </div>
           </div>
+        </div>
+      </div>-->
+
+
+      <div class="form-title">
+        <h2>Your Info</h2>
+        <p>Please enter your full name to set up a chat account.</p>
+      </div>      
+
+      <div class="group">      
+        <div class="form-group">
+          <input 
+            type="text" 
+            required="required"
+            />
+          <label for="input" class="control-label">First Name</label>
+          <i class="bar"></i>
+        </div>
       </div>
 
-
+        <div class="group ">      
+          <div class="form-group">
+            <input 
+              type="text" 
+              required="required"
+              />
+            <label for="input" class="control-label">Last Name</label>
+            <i class="bar"></i>
+          </div>
+        </div>      
 
 
     </form>		
@@ -107,7 +133,7 @@ import {mask} from 'vue-the-mask'
 .login .container { 
   font-family:'Roboto';
   width: 400px; 
-  margin: 80px auto 0; 
+  margin: 40px auto 0; 
   display: block; 
   background: #FFF;
   padding: 50px;

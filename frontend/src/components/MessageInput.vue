@@ -1,5 +1,6 @@
 <template>
 	<div class="main-input">
+
 		<form @submit.prevent="onSubmit">
 			<input 
 				type="text" 
@@ -8,13 +9,24 @@
 				v-model="newMsg"
 				autocomplete="off"
 			>
+		
+		</form>
+			<div class="btn audio__btn">
+				<i v-if="newMsg !== ''" class="material-icons">send</i>
+				<i v-else>
+					<audio-record class="audio__btn" @result="onResult" />
+				</i>
+			</div>	
 
 			<!--<div class="audio btn">
 				<i v-if="newMsg !== ''" class="material-icons">send</i>
 				<i v-else class="material-icons">keyboard_voice</i>
 			</div>-->
-		</form>
 		<!--
+
+					<i class="material-icons">attach_file</i>
+
+				<i class="material-icons">sentiment_satisfied_alt</i>		
 		<div class="extra-functions">
 
 			<div class="paperclip btn">
@@ -33,12 +45,12 @@
 
 
 <script>
-	
+import AudioRecord from './AudioRecord'
 
 	export default {
 		data() {
 			return {
-				newMsg: ''
+				newMsg: '',
 			}
 		},
 		methods: {
@@ -54,7 +66,17 @@
 					this.$emit('add-new-msg', msg)
 					this.newMsg = ''
 				}
-			}
+			},
+			onResult (data) {
+			/*	this.recordings.push({
+					src: window.URL.createObjectURL(data)
+				})*/
+				//console.log(this.recordings)
+				this.$emit('add-audio-msg', {src: window.URL.createObjectURL(data)})
+			}			
+		},
+		components: {
+			AudioRecord
 		},
 		computed: {
 		},
@@ -70,34 +92,6 @@
 .main-input {
   position: relative;
 }
-
-
-/*
-.extra-functions .btn {
-	width: 25px;
-	height: 25px;
-	bottom: 10px;
-}
-
-.extra-functions .paperclip {
-	position: absolute;
-	left: 14px;
-}
-.extra-functions .paperclip i {
-	transform: rotate(45deg);
-}
-
-.extra-functions .emoji {
-	position: absolute;
-	right: 360px;
-}
-
-.audio {
-	bottom: 10px;
-	position: absolute;
-	right: 300px;
-}
-*/
 
 .msg-input {
 	max-width: 65%;
@@ -120,6 +114,13 @@
 	font-size: 16px;
 	margin-left: 80px;
 	position: absolute;
+}
+
+.audio__btn {
+	position: absolute;
+	bottom: -19px;
+	right: 150px;
+	cursor: pointer;
 }
 
 </style>

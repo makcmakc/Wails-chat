@@ -17,6 +17,15 @@
       </div>	
     </div>
 
+
+    <div class="recorded-audio">
+      <div v-for="(record, index) in recordings" :key="index" class="recorded-item">
+        <div class="message">
+          <audio :src="record.src" controls />
+        </div>
+      </div>
+    </div>
+
 		<v-dialog />
 
     <vue-context ref="menu">
@@ -44,7 +53,7 @@
 
       }
     },
-		props: ['messages'],
+		props: ['messages', 'recordings'],
 		components: {
 			VueContext 
 		},
@@ -73,7 +82,7 @@
           await navigator.clipboard.writeText(toCopy)
         }
         catch (err) {
-          console.error('Failed to copy: ', err)
+          //console.error('Failed to copy: ', err)
         }      
       },
       reply() {},

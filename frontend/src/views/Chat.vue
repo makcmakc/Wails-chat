@@ -11,12 +11,17 @@
     </div>  
 
     <div class="messages">
-      <Messages v-bind:messages="messages" v-on:delete-message="deleteMsg" />
+      <Messages 
+        v-bind:messages="messages" 
+        v-bind:recordings="recordings" 
+        v-on:delete-message="deleteMsg" 
+      />
     </div>
 
     <div class="message-input">
-      <MessageInput @add-new-msg="newMsg" />
+      <MessageInput @add-new-msg="newMsg" @add-audio-msg="newAudioMsg" />
     </div>
+
 		
 	</div>
 </template>
@@ -43,7 +48,9 @@ export default {
         {id: 1, time: '21:30', content: 'Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Что деревни то, буквоград своих дал это ее. Рукописи дал буквенных точках заглавных если, взгляд!', received: true},
         {id: 2, time: '21:46', content: 'Lorem ipsum dolor sit amet, orem ipsum dolor sit amet.', received: false}
       ],
-      isOpen: true
+      isOpen: true,
+      recordings: [],
+
     }
   },
   methods: {
@@ -52,6 +59,9 @@ export default {
     },
     deleteMsg(id) {
       this.messages = this.messages.filter(m => m.id !== id)
+    },
+    newAudioMsg(msg) {
+      this.recordings.push(msg)
     }
   },
   components: {
