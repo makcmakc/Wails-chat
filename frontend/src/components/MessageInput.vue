@@ -11,11 +11,11 @@
 			>
 		
 		</form>
+		
 			<div class="btn audio__btn">
 				<i v-if="newMsg !== ''" class="material-icons">send</i>
-				<i v-else>
-					<audio-record class="audio__btn" @result="onResult" />
-				</i>
+				<i v-else class="material-icons">
+					<audio-record @result="onResult" /></i>
 			</div>	
 
 			<!--<div class="audio btn">
@@ -66,13 +66,11 @@ import AudioRecord from './AudioRecord'
 					this.$emit('add-new-msg', msg)
 					this.newMsg = ''
 				}
+
 			},
 			onResult (data) {
-			/*	this.recordings.push({
-					src: window.URL.createObjectURL(data)
-				})*/
-				//console.log(this.recordings)
 				this.$emit('add-audio-msg', {src: window.URL.createObjectURL(data)})
+				//console.log(typeof data)
 			}			
 		},
 		components: {
@@ -118,8 +116,8 @@ import AudioRecord from './AudioRecord'
 
 .audio__btn {
 	position: absolute;
-	bottom: -19px;
-	right: 150px;
+	bottom: -39px;
+	right: 300px;
 	cursor: pointer;
 }
 

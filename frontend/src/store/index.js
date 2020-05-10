@@ -1,12 +1,13 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
+import info from './info'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-  	contacts: [],
+    contacts: [],
     chats: []
   },
   mutations: {
@@ -30,10 +31,9 @@ export default new Vuex.Store({
           commit('SET_CHATS_TO_STORE', chats.data)
         })
     },
-    GET_LAST_MESSAGE() {
-      
-    }     	
+    GET_LAST_MESSAGE() {}     	
   },
   modules: {
+    info
   }
 })

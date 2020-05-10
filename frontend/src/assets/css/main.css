@@ -698,3 +698,87 @@ a {
 }
 
 
+.player {
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.play_pause_btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #4fc3f7;
+  margin-right: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timing {
+  position: absolute;
+  bottom: 6px;
+  left: 70px;
+  font-size: 12px;
+}
+
+i.play_pause_circle {
+  color: #4fc3f7;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.player .progress__bar {
+  height: 3px;
+  width: 75%;
+  cursor: pointer;
+  background-color: #d0d8e6;
+
+  border-radius: 10px;
+  position: absolute;
+  bottom: -2px;
+  right: 5px;
+}
+
+
+
+.player .player-cover {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: coral;
+}
+
+
+.progress {
+  width: 100%;
+  margin-top: -15px;
+  user-select: none;
+}
+.progress__top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.progress__duration {
+  color: #71829e;
+  font-weight: 700;
+  font-size: 20px;
+  opacity: 0.5;
+}
+.progress__time {
+  margin-top: 2px;
+  color: #71829e;
+  font-weight: 700;
+  font-size: 16px;
+  opacity: 0.7;
+}
+
+
+
+.progress__current {
+  height: inherit;
+  width: 0%;
+  background-color: #a3b3ce;
+  border-radius: 10px;
+}

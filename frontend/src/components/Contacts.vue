@@ -1,5 +1,6 @@
 <template>
 	<ul class="contacts">
+
 		<li 
 			class="contact-user"
 			v-for="contact in contacts" 
@@ -8,7 +9,6 @@
 			>
 
 				<img :src=" require(`../assets/images/${contact.avatar}`) ">
-
 
 				<h4>{{ contact.name }}</h4>
 
@@ -23,16 +23,18 @@
 
 
 <script>
-	import {mapActions, mapState} from 'vuex'
+	import { mapActions, mapState, mapGetters } from 'vuex'
 	export default {
 		name: 'contacts',
 		props: ['value'],
 		data: () => ({
 			room: {},
-			lastMessage: ''
+			lastMessage: '',
+			isRuLocale: true
 		}),
 		computed: {
-			...mapState(['contacts', 'chats'])
+			...mapState(['contacts', 'chats']),
+			...mapGetters(['info'])
 		},
 		methods: {
 			...mapActions(['FETCH_CONTACTS', 'FETCH_CHATS']),
@@ -43,7 +45,8 @@
 						this.lastMessage = chat.content
 					}
 				})
-			}			
+			},
+
 		},
 		mounted() {
 			this.FETCH_CONTACTS()

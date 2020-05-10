@@ -5,6 +5,7 @@
 		<div class="phone-number">
 			{{ phoneNumber }}
 		</div>			
+
 		
 		<div class="menu-points">
 			<ul>
@@ -21,13 +22,21 @@
 
 
 <script>
+	//import localizeFilter from '@/filters/localizeFilter'
 	import { Slide } from 'vue-burger-menu'
+
 	export default {
 		data() {
 			return {
 				name: 'Макс Телешев',
 				phoneNumber: '+7 964 345 68 21',
 			}
+		},
+		computed: {
+
+		},
+		mounted() {
+
 		},
 		components: {
 			Slide 
