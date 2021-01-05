@@ -11,7 +11,7 @@
   "dependencies": {
     "@fortawesome/vue-fontawesome": "^0.1.9",
     "@wailsapp/runtime": "^1.0.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "core-js": "^2.6.4",
     "json-server": "^0.16.1",
     "material-design-icons-iconfont": "^5.0.1",
