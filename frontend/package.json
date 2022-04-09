@@ -15,7 +15,7 @@
     "core-js": "^2.6.4",
     "json-server": "^0.16.1",
     "material-design-icons-iconfont": "^5.0.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "startaudiocontext": "^1.2.1",
     "tone": "^13.8.25",
     "vue": "^2.5.22",
